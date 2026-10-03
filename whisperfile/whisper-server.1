@@ -28,7 +28,7 @@ https://huggingface.co/ggerganov/whisper.cpp
 .It Fl Fl host Ar ADDR
 Hostname or IP address to bind to. Default is 127.0.0.1.
 .It Fl Fl port Ar PORT
-Port number. Default is 8080.
+Port number. Default is 8081.
 .It Fl l Ar LANG , Fl Fl language Ar LANG
 Default spoken language. Use 'auto' for auto-detect.
 .It Fl tr , Fl Fl translate
@@ -59,14 +59,14 @@ language, translate, temperature, prompt.
 .Pp
 Example:
 .Bd -literal -offset indent
-curl http://localhost:8080/inference \\
+curl http://localhost:8081/inference \\
   -F "file=@audio.wav" \\
   -F "response_format=json"
 .Ed
 .Ss POST /load
 Load a different model at runtime.
 .Bd -literal -offset indent
-curl http://localhost:8080/load \\
+curl http://localhost:8081/load \\
   -F "model=/path/to/model.bin"
 .Ed
 .Sh DOCUMENTATION
